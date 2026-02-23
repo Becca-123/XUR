@@ -1,0 +1,53 @@
+//managed implementation in class zz1_cl_fixedasset unique;
+//strict ( 2 );
+//define behavior for ZZ1_I_FIXEDASSET //alias <alias_name>
+//persistent table ZZ1_I_FIXEDASSET
+//lock master etag master MasterFixedAsset
+//authorization master ( global )
+////etag master <field_name>
+//{
+////  create;
+//    update;
+////  delete;
+//    field ( readonly ) CompanyCode, MasterFixedAsset, FixedAsset, ValidityStartDate, ResponsibleCostCenter, InternalOrder, PersonnelNumber, FunctionalArea, IsShutDown;
+////  factory action UpdateData parameter ZZ1_FIXEDASSET_ABSTRACT_ENTITY [1];
+////  static action DataSelAll parameter ZZ1_FAFILTER_ABSTRACT_ENTITY ;
+//    static action UpdateData parameter ZZ1_FIXEDASSET_ABSTRACT_ENTITY ;
+//
+////  mapping for ZZ1_I_FIXEDASSET
+////  {
+////    CompanyCode = CompanyCode ;
+////    MasterFixedAsset = MasterFixedAsset ;
+////    FixedAsset = FixedAsset ;
+////    ValidityStartDate = ValidityStartDate ;
+////    CostCenter = CostCenter ;
+////    ResponsibleCostCenter = ResponsibleCostCenter ;
+////    Plant = Plant ;
+////    AssetLocation = AssetLocation ;
+////    Room = Room ;
+////    InternalOrder = InternalOrder ;
+////    PersonnelNumber = PersonnelNumber ;
+////    FunctionalArea = FunctionalArea ;
+////    IsShutDown = IsShutDown ;
+////    error = error ;
+////    message = message ;
+////    updatedata = updatedata ;
+////  }
+//}
+
+unmanaged implementation in class zz1_cl_fixedasset unique;
+strict ( 2 );
+define behavior for ZZ1_I_FIXEDASSET implementation in class zz1_cl_fixedasset unique //alias <alias_name>
+lock master
+authorization master ( instance, global)
+//etag master <field_name>
+{
+      field ( readonly ) CompanyCode, MasterFixedAsset, FixedAsset, ValidityStartDate, ResponsibleCostCenter, InternalOrder, PersonnelNumber, FunctionalArea, IsShutDown;
+//      action UpdateData parameter ZZ1_FIXEDASSET_ABSTRACT_ENTITY ;
+      action UpdateData deep parameter ZZ1_FIXEDASSET_ABSTRACT_ENTITY ;
+
+      static action Update_Data deep parameter ZZ1_FIXEDASSET_ABSTRACT_ENTITY ;
+//      action ( features : instance ) MaterialConfirmation;
+//      static action Material_Confirmation;
+      update;
+}

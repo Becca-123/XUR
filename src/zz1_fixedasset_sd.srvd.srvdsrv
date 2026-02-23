@@ -1,0 +1,4 @@
+@EndUserText.label: '固定資產主檔大量修改的API Service Definition'
+define service ZZ1_FIXEDASSET_SD {
+  expose ZZ1_PV_FIXEDASSET;
+}

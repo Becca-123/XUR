@@ -1,0 +1,8 @@
+projection;
+strict ( 2 );
+
+define behavior for ZZ1_PV_FIXEDASSET //alias <alias_name>
+{
+  use update;
+  use action UpdateData;
+}

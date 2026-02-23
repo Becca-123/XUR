@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "固定資產主檔大量修改",
+    "originalLanguage": "zh-Hant",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "固定資產主檔大量修改"
+  },
+  "ui5AppDetails": {
+    "appId": "zz1fixedasset"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_FF2AFE1AFFF622D1432520FA33BF7DBD75380C10_TM",
+    "semanticObject": "zz1_fixedasset",
+    "action": "Manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_FF2AFE1AFFF622D1432520FA33BF7DBD75380C10_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "固定資產主檔大量修改"
+      }
+    }
+  ]
+}
